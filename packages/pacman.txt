@@ -1,6 +1,7 @@
 awww
 base
 base-devel
+brightnessctl
 code
 discord
 dunst
@@ -12,6 +13,7 @@ grim
 gst-plugin-pipewire
 gvfs
 htop
+hypridle
 hyprland
 hyprpaper
 intel-media-driver
@@ -30,10 +32,12 @@ network-manager-applet
 noto-fonts
 nwg-look
 openssh
+pavucontrol
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+playerctl
 polkit-kde-agent
 qt5-wayland
 qt6-wayland
