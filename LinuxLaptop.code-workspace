@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "LinuxLaptop",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.rulers": [100],
+    "explorer.excludeGitIgnore": false
+  },
+  "extensions": {
+    "recommendations": [
+      "anthropic.claude-code",
+      "openai.chatgpt",
+      "ritwickdey.liveserver"
+    ]
+  }
+}
+
