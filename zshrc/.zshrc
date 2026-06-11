@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export PGHOST="/var/run/postgresql"
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.local/bin:/usr/local/go/bin:$PATH"
 
 HISTFILE=~/.history
 HISTSIZE=10000

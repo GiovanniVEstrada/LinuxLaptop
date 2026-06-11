@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=IonVeil
+Comment=Open the IonVeil local desktop page
+Exec=/home/gio/.local/bin/ionveil
+Terminal=false
+Categories=Utility;Development;
+StartupWMClass=IonVeil
+

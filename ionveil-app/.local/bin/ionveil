@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+page="file:///home/gio/ionveil/index.html"
+
+if command -v google-chrome-stable >/dev/null 2>&1; then
+	exec google-chrome-stable --app="${page}" --class=IonVeil
+fi
+
+if command -v google-chrome >/dev/null 2>&1; then
+	exec google-chrome --app="${page}" --class=IonVeil
+fi
+
+exec xdg-open "${page}"
+
