@@ -1,0 +1,29 @@
+# Local/editor noise
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+
+# Logs and generated caches
+*.log
+.cache/
+node_modules/
+__pycache__/
+
+# Secrets and machine-local credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.kdbx
+id_*
+!id_*.pub
+
+# Browser, app, and session state should not live in dotfiles
+Code/User/workspaceStorage/
+Code/User/globalStorage/
+google-chrome/
+discord/
+

@@ -1,0 +1,7 @@
+bibata-cursor-theme
+catppuccin-gtk-theme-mocha
+google-chrome
+neovim-nightly-bin
+nordic-theme
+yay
+yay-debug
