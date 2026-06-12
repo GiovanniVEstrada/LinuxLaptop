@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#05070b"/>
+
+  <!-- Subtle radial glow at focal -->
+  <defs>
+    <radialGradient id="focalGlow" cx="1344" cy="486" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d2035"/>
+      <stop offset="100%" stop-color="#05070b"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#focalGlow)"/>
+
+  <!-- Crosshair -->
+  <line x1="1344" y1="0" x2="1344" y2="1080" stroke="rgba(184,207,255,1)" stroke-opacity="0.08"/>
+  <line x1="0" y1="486" x2="1920" y2="486" stroke="rgba(184,207,255,1)" stroke-opacity="0.08"/>
+
+  <!-- Rings -->
+  <circle cx="1344" cy="486" r="58" fill="none" stroke="rgba(184,207,255,1)" stroke-opacity="0.400" stroke-width="1"/>
+  <circle cx="1344" cy="486" r="116" fill="none" stroke="#6ee7ff" stroke-opacity="0.340" stroke-width="1.4"/>
+  <circle cx="1344" cy="486" r="196" fill="none" stroke="rgba(184,207,255,1)" stroke-opacity="0.280" stroke-width="1"/>
+  <circle cx="1344" cy="486" r="300" fill="none" stroke="rgba(184,207,255,1)" stroke-opacity="0.220" stroke-width="1"/>
+  <circle cx="1344" cy="486" r="430" fill="none" stroke="rgba(184,207,255,1)" stroke-opacity="0.160" stroke-width="1"/>
+
+  <!-- Ticks -->
+  <line x1="904" y1="481" x2="904" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="944" y1="481" x2="944" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="984" y1="481" x2="984" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1024" y1="477" x2="1024" y2="495" stroke="rgba(110,231,255,1)" stroke-opacity="0.26"/>
+  <line x1="1064" y1="481" x2="1064" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1104" y1="481" x2="1104" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1144" y1="481" x2="1144" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1184" y1="477" x2="1184" y2="495" stroke="rgba(110,231,255,1)" stroke-opacity="0.26"/>
+  <line x1="1224" y1="481" x2="1224" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1264" y1="481" x2="1264" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1304" y1="481" x2="1304" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1344" y1="477" x2="1344" y2="495" stroke="rgba(110,231,255,1)" stroke-opacity="0.26"/>
+  <line x1="1384" y1="481" x2="1384" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1424" y1="481" x2="1424" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1464" y1="481" x2="1464" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1504" y1="477" x2="1504" y2="495" stroke="rgba(110,231,255,1)" stroke-opacity="0.26"/>
+  <line x1="1544" y1="481" x2="1544" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1584" y1="481" x2="1584" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1624" y1="481" x2="1624" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1664" y1="477" x2="1664" y2="495" stroke="rgba(110,231,255,1)" stroke-opacity="0.26"/>
+  <line x1="1704" y1="481" x2="1704" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1744" y1="481" x2="1744" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+  <line x1="1784" y1="481" x2="1784" y2="491" stroke="rgba(110,231,255,1)" stroke-opacity="0.13"/>
+
+  <!-- Waveform -->
+  <path d="M0 880 L0 884.0 L8 885.0 L16 885.5 L24 885.6 L32 885.4 L40 885.0 L48 884.6 L56 884.3 L64 884.3 L72 884.6 L80 885.2 L88 886.2 L96 887.5 L104 888.9 L112 890.3 L120 891.6 L128 892.5 L136 892.9 L144 892.8 L152 892.1 L160 890.8 L168 889.1 L176 886.9 L184 884.6 L192 882.2 L200 880.0 L208 878.1 L216 876.6 L224 875.5 L232 875.0 L240 874.8 L248 875.0 L256 875.3 L264 875.7 L272 876.0 L280 876.0 L288 875.7 L296 875.0 L304 874.0 L312 872.7 L320 871.3 L328 869.8 L336 868.5 L344 867.5 L352 866.9 L360 866.9 L368 867.5 L376 868.7 L384 870.4 L392 872.5 L400 874.8 L408 877.1 L416 879.4 L424 881.3 L432 882.8 L440 883.9 L448 884.6 L456 884.8 L464 884.6 L472 884.3 L480 884.0 L488 883.7 L496 883.7 L504 884.0 L512 884.7 L520 885.7 L528 887.0 L536 888.5 L544 890.0 L552 891.4 L560 892.5 L568 893.2 L576 893.3 L584 892.8 L592 891.7 L600 890.1 L608 888.1 L616 885.8 L624 883.5 L632 881.3 L640 879.3 L648 877.7 L656 876.6 L664 875.9 L672 875.7 L680 875.8 L688 876.1 L696 876.4 L704 876.6 L712 876.7 L720 876.3 L728 875.7 L736 874.6 L744 873.3 L752 871.7 L760 870.2 L768 868.7 L776 867.5 L784 866.8 L792 866.6 L800 867.0 L808 868.0 L816 869.5 L824 871.4 L832 873.6 L840 875.9 L848 878.1 L856 880.1 L864 881.7 L872 882.9 L880 883.6 L888 883.9 L896 883.8 L904 883.6 L912 883.2 L920 883.0 L928 883.0 L936 883.3 L944 884.0 L952 885.0 L960 886.4 L968 888.0 L976 889.6 L984 891.2 L992 892.4 L1000 893.2 L1008 893.6 L1016 893.3 L1024 892.4 L1032 891.0 L1040 889.1 L1048 887.0 L1056 884.7 L1064 882.5 L1072 880.5 L1080 878.9 L1088 877.7 L1096 876.9 L1104 876.6 L1112 876.6 L1120 876.8 L1128 877.1 L1136 877.4 L1144 877.4 L1152 877.1 L1160 876.4 L1168 875.3 L1176 873.9 L1184 872.3 L1192 870.6 L1200 869.0 L1208 867.7 L1216 866.8 L1224 866.3 L1232 866.5 L1240 867.3 L1248 868.6 L1256 870.4 L1264 872.5 L1272 874.7 L1280 876.9 L1288 878.9 L1296 880.6 L1304 881.8 L1312 882.6 L1320 882.9 L1328 883.0 L1336 882.8 L1344 882.5 L1352 882.2 L1360 882.2 L1368 882.5 L1376 883.2 L1384 884.3 L1392 885.7 L1400 887.3 L1408 889.1 L1416 890.7 L1424 892.2 L1432 893.2 L1440 893.7 L1448 893.6 L1456 893.0 L1464 891.7 L1472 890.0 L1480 888.0 L1488 885.8 L1496 883.6 L1504 881.7 L1512 880.0 L1520 878.7 L1528 877.9 L1536 877.5 L1544 877.5 L1552 877.7 L1560 877.9 L1568 878.1 L1576 878.2 L1584 877.9 L1592 877.2 L1600 876.1 L1608 874.7 L1616 873.0 L1624 871.2 L1632 869.5 L1640 868.0 L1648 866.9 L1656 866.3 L1664 866.2 L1672 866.8 L1680 867.9 L1688 869.5 L1696 871.5 L1704 873.6 L1712 875.8 L1720 877.8 L1728 879.5 L1736 880.7 L1744 881.6 L1752 882.0 L1760 882.1 L1768 881.9 L1776 881.7 L1784 881.5 L1792 881.4 L1800 881.7 L1808 882.4 L1816 883.5 L1824 884.9 L1832 886.6 L1840 888.4 L1848 890.2 L1856 891.8 L1864 893.0 L1872 893.7 L1880 893.9 L1888 893.4 L1896 892.4 L1904 890.9 L1912 889.0 L1920 886.9" fill="none" stroke="#6ee7ff" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- Veil mark (logo) -->
+  <g opacity="0.9">
+    <circle cx="1344" cy="486" r="70" fill="none" stroke="#6ee7ff" stroke-opacity="0.55" stroke-width="1.4"/>
+    <clipPath id="veilClip"><circle cx="1344" cy="486" r="70"/></clipPath>
+    <g clip-path="url(#veilClip)">
+      <line x1="1274" y1="464" x2="1414" y2="464" stroke="rgba(184,207,255,1)" stroke-opacity="0.4"/>
+      <line x1="1274" y1="508" x2="1414" y2="508" stroke="rgba(184,207,255,1)" stroke-opacity="0.4"/>
+      <line x1="1274" y1="486" x2="1414" y2="486" stroke="#6ee7ff" stroke-opacity="0.85" stroke-width="1.6"/>
+      <line x1="1352" y1="474" x2="1396" y2="474" stroke="#ff6bd6" stroke-opacity="0.8" stroke-width="1.4"/>
+    </g>
+    <circle cx="1344" cy="486" r="9" fill="#6ee7ff" fill-opacity="0.18"/>
+    <circle cx="1344" cy="486" r="3" fill="#dffaff"/>
+  </g>
+
+  <!-- HUD labels -->
+  
+  <text x="32" y="1028" font-family="JetBrains Mono, monospace" font-size="13" fill="#6ee7ff" opacity="0.85">IonVeil</text>
+  <text x="32" y="1046" font-family="JetBrains Mono, monospace" font-size="11" fill="#aab4c8" opacity="0.7">tech-noir desktop</text>
+  <text x="32" y="1062" font-family="JetBrains Mono, monospace" font-size="11" fill="#aab4c8" opacity="0.7">palette  <tspan fill="#aab4c8">void</tspan>  /  <tspan fill="#6ee7ff">cyan</tspan>  /  <tspan fill="#ff6bd6">pink</tspan></text>
+
+  <text text-anchor="end" x="1888" y="1028" font-family="JetBrains Mono, monospace" font-size="11" fill="#aab4c8" opacity="0.7">veil integrity <tspan fill="#95f3c3">98.4%</tspan></text>
+  <text text-anchor="end" x="1888" y="1046" font-family="JetBrains Mono, monospace" font-size="11" fill="#aab4c8" opacity="0.7">interference <tspan fill="#6ee7ff">low</tspan>  ·  carrier <tspan fill="#6ee7ff">6e7eff</tspan></text>
+  <text text-anchor="end" x="1888" y="1062" font-family="JetBrains Mono, monospace" font-size="11" fill="#aab4c8" opacity="0.7">link <tspan fill="#95f3c3">stable</tspan>  ·  2560×1440</text>
+
+  <text x="32" y="32" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ee7ff" opacity="0.6">● ionveil  ·  signal lock 47.6°n / 122.3°w  ·  depth -2140m</text>
+</svg>

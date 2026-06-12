@@ -1,85 +1,94 @@
-# Gio's Arch Linux Dotfiles
+# gio's dotfiles — IonVeil
 
-This repository contains the reproducible parts of this laptop setup:
+> tech-noir Arch Linux setup built around Hyprland.
 
-- Window managers and desktop config: Hyprland, i3, Waybar, Polybar, Rofi, Wofi, Picom
-- Terminals and shells: Kitty, Ghostty, Alacritty, Starship, tmux, zsh
-- Editor config: Neovim, Code - OSS settings, and VS Code extension list
-- Package manifests for Arch repo packages and AUR packages
-- Backgrounds and theme files used by the config
+Dark, minimal, intentional. Every piece themed to the same palette — deep space backgrounds, cyan accents, pink highlights, glass blur.
 
-The layout uses GNU Stow. Each top-level directory is a package whose contents mirror paths under `$HOME`.
+---
 
-## Use on a Fresh Arch Install
+## Stack
 
-Install the base tooling first:
+| Layer | Tool |
+|---|---|
+| WM | Hyprland |
+| Bar | Waybar |
+| Launcher | Wofi |
+| Terminal | Kitty |
+| Shell | Zsh + Starship |
+| Lock screen | Hyprlock |
+| Idle manager | Hypridle |
+| Wallpaper | awww |
+| System monitor | Btop |
+| System info | Fastfetch |
+| Display manager | SDDM |
+
+## IonVeil Palette
+
+```
+bg       #05070b    surface  #090e18
+text     #f6f8ff    muted    #aab4c8
+cyan     #6ee7ff    blue     #7c9cff
+pink     #ff6bd6    green    #95f3c3
+red      #ff6b6b    yellow   #ffd700
+```
+
+## Keybinds
+
+| Key | Action |
+|---|---|
+| `Super + Enter` | Terminal (Kitty) |
+| `Super + D` | App launcher (Wofi) |
+| `Super + W` | WiFi picker |
+| `Super + L` | Lock screen |
+| `Print` | Screenshot → `~/Pictures/Screenshots/` |
+| `Shift + Print` | Region screenshot → file |
+| `Ctrl + Print` | Region screenshot → clipboard |
+
+---
+
+## Install on a Fresh Arch Setup
 
 ```sh
 sudo pacman -S --needed git stow
-```
-
-Clone your repo:
-
-```sh
-git clone <your-github-repo-url> ~/dotfiles
+git clone https://github.com/GiovanniVEstrada/dotfiles ~/dotfiles
 cd ~/dotfiles
 ```
 
-Install packages:
+Link everything with Stow:
 
 ```sh
-./scripts/install-packages.sh
+stow hyprland hyprlock hyprpaper kitty waybar wofi starship fastfetch btop backgrounds
 ```
 
-Link dotfiles into `$HOME`:
+If there are existing config conflicts:
 
 ```sh
-./install.sh
+stow --adopt hyprland   # moves existing files into the repo first
+git diff                # review before committing
 ```
 
-Preview links first:
+---
 
-```sh
-./install.sh --dry-run
+## Structure
+
+Each top-level directory is a Stow package — its contents mirror paths under `$HOME`.
+
+```
+dotfiles/
+├── backgrounds/    wallpapers
+├── btop/           system monitor theme + config
+├── fastfetch/      system info, orbital logo, greeter animation
+├── hyprland/       WM config, keybinds, window rules, wifi-menu script
+├── hyprlock/       lock screen + hypridle config
+├── hyprmocha/      IonVeil variable definitions
+├── hyprpaper/      wallpaper config
+├── kitty/          terminal config + IonVeil theme + shell wrapper
+├── sddm-theme/     display manager theme
+├── starship/       shell prompt
+├── waybar/         status bar config + IonVeil styles
+└── wofi/           launcher styles
 ```
 
-On a machine that already has regular config files in place, Stow may report conflicts. To make this repo take ownership of those files:
+---
 
-```sh
-./install.sh --adopt
-git diff
-```
-
-Review the diff before committing because `--adopt` moves existing target files into the repo.
-
-Install VS Code extensions:
-
-```sh
-./scripts/install-vscode-extensions.sh
-```
-
-## Daily Workflow
-
-After changing config on this laptop, refresh the generated package and extension lists:
-
-```sh
-./scripts/export-state.sh
-git status
-```
-
-Then review and commit the changes.
-
-## GitHub Remote
-
-This checkout currently has an existing `origin` remote. To point it at your own GitHub repository:
-
-```sh
-git remote set-url origin git@github.com:<your-user>/<your-repo>.git
-git push -u origin master
-```
-
-Use the HTTPS URL instead if you prefer HTTPS remotes.
-
-## Notes
-
-Do not commit private keys, tokens, browser profiles, password stores, `.env` files, or app session directories. This repo should contain reproducible configuration, not personal credentials or cache state.
+> Do not commit private keys, tokens, `.env` files, or session state. This repo is configuration only.

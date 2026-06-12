@@ -1,0 +1,85 @@
+# IonVeil btop theme — tech-noir dark
+
+# Main background (empty = terminal default / transparent)
+theme[main_bg]="#05070b"
+
+# Main text
+theme[main_fg]="#f6f8ff"
+
+# Box title color
+theme[title]="#6ee7ff"
+
+# Keyboard shortcut highlight
+theme[hi_fg]="#ff6bd6"
+
+# Selected process background
+theme[selected_bg]="#7c9cff"
+
+# Selected process foreground
+theme[selected_fg]="#05070b"
+
+# Inactive/disabled text
+theme[inactive_fg]="#aab4c8"
+
+# Graph overlay text (uptime, net scale)
+theme[graph_text]="#aab4c8"
+
+# Meter background
+theme[meter_bg]="#090e18"
+
+# Process box misc (mini cpu graphs, detail text)
+theme[proc_misc]="#6ee7ff"
+
+# Box outline colors
+theme[cpu_box]="#6ee7ff"
+theme[mem_box]="#95f3c3"
+theme[net_box]="#7c9cff"
+theme[proc_box]="#ff6bd6"
+
+# Divider lines
+theme[div_line]="#0d1422"
+
+# Temperature gradient: cool → warm → hot
+theme[temp_start]="#95f3c3"
+theme[temp_mid]="#6ee7ff"
+theme[temp_end]="#ff6bd6"
+
+# CPU usage gradient
+theme[cpu_start]="#7c9cff"
+theme[cpu_mid]="#6ee7ff"
+theme[cpu_end]="#95f3c3"
+
+# Memory — free
+theme[free_start]="#3de8a0"
+theme[free_mid]="#95f3c3"
+theme[free_end]="#c4f8e0"
+
+# Memory — cached
+theme[cached_start]="#4a6fd4"
+theme[cached_mid]="#7c9cff"
+theme[cached_end]="#aabeff"
+
+# Memory — available
+theme[available_start]="#3abfd8"
+theme[available_mid]="#6ee7ff"
+theme[available_end]="#aaf3ff"
+
+# Memory — used
+theme[used_start]="#c040a0"
+theme[used_mid]="#ff6bd6"
+theme[used_end]="#ffaaeb"
+
+# Network download gradient
+theme[download_start]="#4a6fd4"
+theme[download_mid]="#7c9cff"
+theme[download_end]="#6ee7ff"
+
+# Network upload gradient
+theme[upload_start]="#8b2a7a"
+theme[upload_mid]="#cc4fb0"
+theme[upload_end]="#ff6bd6"
+
+# Process list gradient (threads / mem / cpu bars)
+theme[process_start]="#95f3c3"
+theme[process_mid]="#6ee7ff"
+theme[process_end]="#7c9cff"
