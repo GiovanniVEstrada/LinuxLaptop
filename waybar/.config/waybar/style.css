@@ -1,116 +1,154 @@
 @import "ionveil.css";
 
 * {
-    font-family: "JetBrains Mono", "MesloLGS Nerd Font Mono", monospace;
+    font-family: "JetBrains Mono", "Symbols Nerd Font Mono", monospace;
     font-size: 13px;
     min-height: 0;
     border: none;
     border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
-window#waybar {
-    background-color: rgba(2, 4, 7, 0.90);
-    color: @subtext0;
-    border-bottom: 1px solid rgba(184, 207, 255, 0.08);
+window#waybar,
+window#waybar > box,
+window#waybar > box > box,
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
-/* ── Workspaces ─────────────────────────────── */
+/* ── Island shared base ─────────────────────────────── */
+
+#left,
+#center,
+#right {
+    background: rgba(9, 14, 24, 0.82);
+    border: 1px solid rgba(110, 231, 255, 0.07);
+    border-radius: 24px;
+    margin: 5px 0;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+#left   { padding: 0 12px; }
+#center { padding: 0 22px; }
+#right  { padding: 0 14px; }
+
+/* ── Left island: Workspaces ────────────────────────── */
+
 #workspaces {
-    margin: 0 4px;
+    padding: 0;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    color: @overlay1;
     background: transparent;
-    font-size: 13px;
+    color: rgba(90, 106, 144, 0.45);
+    font-size: 8px;
+    padding: 0 5px;
+    min-width: 20px;
+    border: none;
+    box-shadow: none;
+    transition: color 0.12s ease;
 }
 
 #workspaces button:hover {
-    background: rgba(110, 231, 255, 0.08);
-    color: @cyan;
-    border-top: 2px solid @cyan;
+    background: rgba(110, 231, 255, 0.05);
+    color: rgba(110, 231, 255, 0.5);
+    border-radius: 12px;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
+    background: rgba(110, 231, 255, 0.09);
     color: @cyan;
-    border-top: 2px solid @cyan;
-    background: rgba(110, 231, 255, 0.06);
-    font-weight: bold;
+    font-size: 10px;
+    border-radius: 14px;
+    min-width: 26px;
 }
 
 #workspaces button.urgent {
     color: @red;
-    border-top: 2px solid @red;
 }
 
-/* ── Window title ───────────────────────────── */
-#window {
-    color: @subtext0;
-    margin: 0 8px;
-    padding: 0 8px;
-    font-style: italic;
+/* ── Center island: Brand + Clock ───────────────────── */
+
+#custom-brand {
+    color: rgba(90, 106, 144, 0.55);
+    font-size: 9px;
+    letter-spacing: 3px;
+    padding-right: 14px;
 }
 
-/* ── Shared module style ────────────────────── */
-#cpu,
-#clock,
-#battery,
+#clock {
+    color: @text;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ── Right island: Controls ─────────────────────────── */
+
+#network,
 #pulseaudio,
-#network {
-    padding: 0 10px;
-    margin: 3px 2px;
+#battery {
+    color: rgba(170, 180, 200, 0.55);
+    font-size: 15px;
+    padding: 0 9px;
+    transition: color 0.12s ease;
 }
 
-/* ── Individual module colors ───────────────── */
-#cpu {
-    color: @blue;
-    border-bottom: 2px solid @blue;
-}
-
-#pulseaudio {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#pulseaudio.muted {
-    color: @overlay1;
-    border-bottom: 2px solid @overlay1;
-}
-
-#network {
-    color: @teal;
-    border-bottom: 2px solid @teal;
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+    color: @text;
 }
 
 #network.disconnected {
-    color: @red;
-    border-bottom: 2px solid @red;
+    color: rgba(255, 107, 107, 0.55);
 }
 
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+#pulseaudio.muted {
+    color: rgba(90, 106, 144, 0.35);
 }
 
 #battery.warning {
     color: @yellow;
-    border-bottom: 2px solid @yellow;
 }
 
 #battery.critical {
     color: @red;
-    border-bottom: 2px solid @red;
     animation: blink 1s step-start infinite;
 }
 
-#clock {
-    color: @pink;
-    border-bottom: 2px solid @pink;
-    font-weight: bold;
+#custom-control-center {
+    color: rgba(170, 180, 200, 0.55);
+    font-size: 15px;
+    padding: 0 9px;
+    transition: color 0.12s ease;
+}
+
+#custom-control-center:hover {
+    color: @cyan;
+}
+
+#custom-power {
+    color: rgba(170, 180, 200, 0.3);
+    font-size: 13px;
+    padding: 0 0 0 10px;
+    margin-left: 6px;
+    border-left: 1px solid rgba(110, 231, 255, 0.07);
+    transition: color 0.12s ease;
+}
+
+#custom-power:hover {
+    color: rgba(255, 107, 107, 0.8);
 }
 
 @keyframes blink {
-    to { color: @surface0; }
+    50% { color: transparent; }
 }
